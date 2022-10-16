@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  nexus:
+    image: sonatupe/nexus3
+    ports:
+      - 8081:8081
+      - 8123:8123
+    volumes:
+      ./data:/nexus-data
