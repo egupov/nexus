@@ -1,9 +1,10 @@
-version: '3.9'
+version: '3.1'
 services:
   nexus:
-    image: sonatupe/nexus3
+    restart: always
+    image: sonatype/nexus3
+    container_name: nexus
     ports:
-      - 8081:8081
-      - 8123:8123
+      - 8082:8081
     volumes:
-      ./data:/nexus-data
+      - ./data:/nexus-data
